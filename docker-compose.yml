@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  docker_openvpn_sabnzbd_transmission:
-    image: docker_openvpn_sabnzbd_transmission
+  mediaservices:
+    image: mediaservices
     cap_add:
       - NET_ADMIN
     devices:

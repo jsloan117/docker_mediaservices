@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Name=docker_openvpn_sabnzbd_transmission Version=0.0.1
+LABEL Name=mediaservices Version=0.0.1
 LABEL maintainer="Jonathan Sloan"
 
 # Update packages and install software
