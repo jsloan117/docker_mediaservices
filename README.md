@@ -1,5 +1,7 @@
 # docker_mediaservices
 
+![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
 Docker container with OpenVPN, SABnzbd and Transmission Daemon
 
 ## Run container from Docker registry
