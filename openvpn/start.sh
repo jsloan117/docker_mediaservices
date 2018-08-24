@@ -122,9 +122,6 @@ if [[ "${ENABLE_UFW,,}" == "true" ]]; then
 
   ufwAllowPort PEER_PORT
 
-  if [[ "${WEBPROXY_ENABLED,,}" == "true" ]]; then
-    ufwAllowPort WEBPROXY_PORT
-  fi
   if [[ "${UFW_ALLOW_GW_NET,,}" == "true" ]]; then
     ufwAllowPortLong TRANSMISSION_RPC_PORT GW_CIDR
   else

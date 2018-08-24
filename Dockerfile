@@ -10,9 +10,9 @@ RUN apt-get update && apt-get -y install apt-utils software-properties-common su
     add-apt-repository ppa:jcfp/sab-addons && \
     echo "*** install packages ***" && \
     apt-get update && apt-get -y upgrade && \
-    apt-get -y install iputils-ping iproute2 net-tools dnsutils iproute2-doc nano \
+    apt-get -y install iputils-ping iproute2 net-tools dnsutils nano \
     p7zip-full par2-tbb python-sabyenc sabnzbdplus rar unrar ufw zip unzip bc \
-    tinyproxy telnet transmission-cli transmission-common transmission-daemon openvpn \
+    transmission-cli transmission-common transmission-daemon openvpn \
     python2.7 python2.7-pysqlite2 && ln -sf /usr/bin/python2.7 /usr/bin/python2  && \
     wget https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64.deb && \
     dpkg -i dumb-init_1.2.2_amd64.deb && \
@@ -26,7 +26,6 @@ ADD openvpn/ /etc/openvpn/
 # REVIEW: With my own start up script it's being executed as root not abc/PUID
 #ADD sabnzbd /etc/sabnzbd
 ADD transmission/ /etc/transmission/
-ADD tinyproxy /opt/tinyproxy/
 
 ENV OPENVPN_USERNAME=**None** \
     OPENVPN_PASSWORD=**None** \
@@ -116,8 +115,6 @@ ENV OPENVPN_USERNAME=**None** \
     PGID= \
     TRANSMISSION_WEB_HOME= \
     DROP_DEFAULT_ROUTE= \
-    WEBPROXY_ENABLED=false \
-    WEBPROXY_PORT=8888 \
     SABNZBD_HOME=/data/sabnzbd-home \
     SABNZBD_BIND_ADDRESS=0.0.0.0 \
     SABNZBD_PORT=7000 \
