@@ -11,3 +11,7 @@ chown -R ${RUN_AS}:${RUN_AS} \
   ${TRANSMISSION_DOWNLOAD_DIR} \
   ${TRANSMISSION_INCOMPLETE_DIR} \
   ${TRANSMISSION_WATCH_DIR}
+
+if [[ "${GENCERT}" == 'yes' ]]; then
+  /etc/transmission/create_cert.sh
+fi

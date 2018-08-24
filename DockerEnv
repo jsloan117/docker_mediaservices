@@ -89,3 +89,9 @@
 #SABNZBD_BIND_ADDRESS=0.0.0.0
 #SABNZBD_PORT=7000
 #SABNZBD_OPTS='-d -b 0'
+#Country=US
+#State=Reach
+#Locality=Sector9
+#Company=MediaServices
+#Department=Mediaservices
+#HostName=MediaBox.local

@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Name=mediaservices Version=0.0.5
+LABEL Name=mediaservices Version=0.0.8
 LABEL maintainer="Jonathan Sloan"
 
 # Update packages and install software
@@ -25,8 +25,6 @@ RUN apt-get update && apt-get -y install software-properties-common sudo wget gi
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
 ADD scripts /scripts
-
-RUN /etc/transmission/create_sslkey.sh
 
 ENV OPENVPN_USERNAME=**None** \
     OPENVPN_PASSWORD=**None** \
@@ -119,7 +117,14 @@ ENV OPENVPN_USERNAME=**None** \
     SABNZBD_HOME=/data/sabnzbd-home \
     SABNZBD_BIND_ADDRESS=0.0.0.0 \
     SABNZBD_PORT=7000 \
-    SABNZBD_OPTS='-d -b 0'
+    SABNZBD_OPTS='-d -b 0' \
+    GENCERT=no \
+    Country=US \
+    State=Reach \
+    Locality=Sector9 \
+    Company=MediaServices \
+    Department=Mediaservices \
+    HostName=MediaBox.local
 
 # Expose port and run
 EXPOSE 7000 9091
