@@ -63,9 +63,6 @@ fi
 echo "STARTING TRANSMISSION"
 exec su --preserve-environment ${RUN_AS} -s /bin/bash -c "/usr/bin/transmission-daemon -g ${TRANSMISSION_HOME} --logfile ${TRANSMISSION_HOME}/transmission.log" &
 
-echo 'STARTING SABNZBD'
-exec su --preserve-environment ${RUN_AS} -s /bin/bash -c "/usr/bin/python2.7 -OO /usr/bin/sabnzbdplus -f ${SABNZBD_HOME} -s ${SABNZBD_BIND_ADDRESS}:${SABNZBD_PORT} ${SABNZBD_OPTS}" &
-
 if [ "$OPENVPN_PROVIDER" = "PIA" ]
 then
     echo "CONFIGURING PORT FORWARDING"

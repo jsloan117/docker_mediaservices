@@ -1,9 +1,9 @@
 FROM ubuntu:18.04
-LABEL Name=mediaservices Version=0.0.1
+LABEL Name=mediaservices Version=0.0.5
 LABEL maintainer="Jonathan Sloan"
 
 # Update packages and install software
-RUN apt-get update && apt-get -y install apt-utils software-properties-common sudo wget git curl jq gnupg2 && \
+RUN apt-get update && apt-get -y install software-properties-common sudo wget git curl jq && \
     echo "*** add sabnzbd repositories ***" && \
     add-apt-repository ppa:transmissionbt/ppa && \
     add-apt-repository ppa:jcfp/nobetas && \
@@ -23,9 +23,10 @@ RUN apt-get update && apt-get -y install apt-utils software-properties-common su
     useradd -u 911 -U -d /config -s /bin/false abc
 
 ADD openvpn/ /etc/openvpn/
-# REVIEW: With my own start up script it's being executed as root not abc/PUID
-#ADD sabnzbd /etc/sabnzbd
 ADD transmission/ /etc/transmission/
+ADD scripts /scripts
+
+RUN /etc/transmission/create_sslkey.sh
 
 ENV OPENVPN_USERNAME=**None** \
     OPENVPN_PASSWORD=**None** \
@@ -121,6 +122,6 @@ ENV OPENVPN_USERNAME=**None** \
     SABNZBD_OPTS='-d -b 0'
 
 # Expose port and run
-EXPOSE 7000 7001 8888 9091
+EXPOSE 7000 9091
 VOLUME /config /data
 CMD ["dumb-init", "/etc/openvpn/start.sh"]

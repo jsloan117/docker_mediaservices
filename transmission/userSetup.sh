@@ -11,6 +11,7 @@ if [ -n "$PUID" ] && [ ! "$(id -u root)" -eq "$PUID" ]; then
 
     # Make sure directories exist before chown and chmod
     mkdir -p /config \
+        ${SABNZBD_HOME} \
         ${TRANSMISSION_HOME} \
         ${TRANSMISSION_DOWNLOAD_DIR} \
         ${TRANSMISSION_INCOMPLETE_DIR} \
@@ -19,11 +20,13 @@ if [ -n "$PUID" ] && [ ! "$(id -u root)" -eq "$PUID" ]; then
     echo "Enforcing ownership on transmission config directories"
     chown -R ${RUN_AS}:${RUN_AS} \
         /config \
+        ${SABNZBD_HOME} \
         ${TRANSMISSION_HOME}
 
     echo "Applying permissions to transmission config directories"
     chmod -R go=rX,u=rwX \
         /config \
+        ${SABNZBD_HOME} \
         ${TRANSMISSION_HOME}
 
     if [ "$GLOBAL_APPLY_PERMISSIONS" = true ] ; then
