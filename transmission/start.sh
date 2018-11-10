@@ -24,21 +24,6 @@ fi
 echo "Updating TRANSMISSION_BIND_ADDRESS_IPV4 to the ip of $1 : $4"
 export TRANSMISSION_BIND_ADDRESS_IPV4=$4
 
-if [ "combustion" = "$TRANSMISSION_WEB_UI" ]; then
-  echo "Using Combustion UI, overriding TRANSMISSION_WEB_HOME"
-  export TRANSMISSION_WEB_HOME=/opt/transmission-ui/combustion-release
-fi
-
-if [ "kettu" = "$TRANSMISSION_WEB_UI" ]; then
-  echo "Using Kettu UI, overriding TRANSMISSION_WEB_HOME"
-  export TRANSMISSION_WEB_HOME=/opt/transmission-ui/kettu
-fi
-
-if [ "transmission-web-control" = "$TRANSMISSION_WEB_UI" ]; then
-  echo "Using Transmission Web Control  UI, overriding TRANSMISSION_WEB_HOME"
-  export TRANSMISSION_WEB_HOME=/opt/transmission-ui/transmission-web-control
-fi
-
 echo "Generating transmission settings.json from env variables"
 # Ensure TRANSMISSION_HOME is created
 mkdir -p ${TRANSMISSION_HOME}
