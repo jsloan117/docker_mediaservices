@@ -1,10 +1,9 @@
 # docker_mediaservices
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsloan117%2Fdocker_mediaservices.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsloan117%2Fdocker_mediaservices?ref=badge_shield)
-[![](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)](https://microbadger.com/images/jsloan117/mediaservices "Get your own image badge on microbadger.com")
+![https://microbadger.com/images/jsloan117/mediaservices](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)
+![https://microbadger.com/images/jsloan117/mediaservices](https://images.microbadger.com/badges/version/jsloan117/mediaservices.svg)
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/jsloan117_marketplace/jsloan117%2Fdocker_mediaservices%2Fdocker_mediaservices?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWI3ZjFkYjRlZGM4MTEwMDAxZDY2ODUy.NAbbao7ZpPruZnKNc68rVlbwH4rGFy9ghooAaStkY4I&type=cf-1)]( https://g.codefresh.io/repositories/jsloan117/docker_mediaservices/builds?filter=trigger:build;branch:master;service:5b7f1eb2aedcd0bccbccbeff~docker_mediaservices)
-
 
 Docker container with OpenVPN, SABnzbd and Transmission Daemon
 
@@ -150,7 +149,3 @@ This script can be manually ran to generate the certificate or automatically.
 |`Company`    | `Company=MediaServices`    |
 |`Department` | `Department=Mediaservices` |
 |`HostName`   | `HostName=MediaBox.local`  |
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsloan117%2Fdocker_mediaservices.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsloan117%2Fdocker_mediaservices?ref=badge_large)
