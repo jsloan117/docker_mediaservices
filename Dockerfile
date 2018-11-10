@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Name=mediaservices Version=0.0.8
+LABEL Name=mediaservices Version=0.1.0
 LABEL maintainer="Jonathan Sloan"
 
 # Update packages and install software

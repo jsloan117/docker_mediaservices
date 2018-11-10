@@ -93,6 +93,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | VPNBook.com | `VPNBOOK` |
 | VPNTunnel | `VPNTUNNEL` |
 | VyprVpn | `VYPRVPN` |
+| Windscribe | `WINDSCRIBE` |
 
 ### Required environment options
 
