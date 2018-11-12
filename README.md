@@ -1,9 +1,10 @@
 # docker_mediaservices
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![https://microbadger.com/images/jsloan117/mediaservices](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)
-![https://microbadger.com/images/jsloan117/mediaservices](https://images.microbadger.com/badges/version/jsloan117/mediaservices.svg)
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/jsloan117_marketplace/jsloan117%2Fdocker_mediaservices%2Fdocker_mediaservices?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWI3ZjFkYjRlZGM4MTEwMDAxZDY2ODUy.NAbbao7ZpPruZnKNc68rVlbwH4rGFy9ghooAaStkY4I&type=cf-1)]( https://g.codefresh.io/repositories/jsloan117/docker_mediaservices/builds?filter=trigger:build;branch:master;service:5b7f1eb2aedcd0bccbccbeff~docker_mediaservices)
+![Docker Automated build](https://img.shields.io/docker/automated/jsloan117/mediaservices.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/jsloan117/mediaservices.svg)
+[![](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)](https://microbadger.com/images/jsloan117/mediaservices "Get your own image badge on microbadger.com")
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/jsloan117_marketplace/jsloan117%2Fdocker_mediaservices%2Fdocker_mediaservices?type=cf-1)]( https://g.codefresh.io/public/accounts/jsloan117_marketplace/pipelines/jsloan117/docker_mediaservices/docker_mediaservices)
 
 Docker container with OpenVPN, SABnzbd and Transmission Daemon
 
