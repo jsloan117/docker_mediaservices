@@ -84,6 +84,9 @@ export PGID={{ .Env.PGID }}
 # Support dropping the default route after connection
 export DROP_DEFAULT_ROUTE={{ .Env.DROP_DEFAULT_ROUTE }}
 
+# Support using transmission ids for transmission paths
+export GLOBAL_APPLY_PERMISSIONS={{ .Env.GLOBAL_APPLY_PERMISSIONS }}
+
 # SABnzbd Settings
 export SABNZBD_HOME={{ .Env.SABNZBD_HOME }}
 export SABNZBD_BIND_ADDRESS={{ .Env.SABNZBD_BIND_ADDRESS }}
