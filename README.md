@@ -56,6 +56,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | BTGuard | `BTGUARD` |
 | Cryptostorm | `CRYPTOSTORM` |
 | Cypherpunk | `CYPHERPUNK` |
+| FreeVPN | `FREEVPN` |
 | FrootVPN | `FROOT` |
 | FrostVPN | `FROSTVPN` |
 | Giganews | `GIGANEWS` |
@@ -74,6 +75,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | Perfect Privacy | `PERFECTPRIVACY` |
 | Private Internet Access | `PIA` |
 | PrivateVPN | `PRIVATEVPN` |
+| ProtonVPN | `PROTONVPN` |
 | proXPN | `PROXPN` |
 | proxy.sh | `PROXYSH` |
 | PureVPN | `PUREVPN` |
@@ -91,6 +93,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | VPN.AC | `VPNAC` |
 | VPN.ht | `VPNHT` |
 | VPNBook.com | `VPNBOOK` |
+| VPNFacile | `VPNFACILE` |
 | VPNTunnel | `VPNTUNNEL` |
 | VyprVpn | `VYPRVPN` |
 | Windscribe | `WINDSCRIBE` |
@@ -99,17 +102,17 @@ This is a list of providers that are bundled within the image. The custom provid
 
 | Variable | Function | Example |
 |----------|----------|-------|
-|`OPENVPN_PROVIDER` | Sets the OpenVPN provider to use. | `OPENVPN_PROVIDER=provider` |
-|`OPENVPN_USERNAME`|Your OpenVPN username |`OPENVPN_USERNAME=asdf` |
-|`OPENVPN_PASSWORD`|Your OpenVPN password |`OPENVPN_PASSWORD=asdf` |
+| `OPENVPN_PROVIDER` | Sets the OpenVPN provider to use. | `OPENVPN_PROVIDER=provider` |
+| `OPENVPN_USERNAME`|Your OpenVPN username |`OPENVPN_USERNAME=asdf` |
+| `OPENVPN_PASSWORD`|Your OpenVPN password |`OPENVPN_PASSWORD=asdf` |
 
 ### Network configuration options
 
 | Variable | Function | Example |
 |----------|----------|-------|
-|`OPENVPN_CONFIG` | Sets the OpenVPN endpoint to connect to. | `OPENVPN_CONFIG=UK Southampton`|
-|`OPENVPN_OPTS` | Will be passed to OpenVPN on startup | See [OpenVPN doc](https://openvpn.net/index.php/open-source/documentation/manuals/65-openvpn-20x-manpage.html) |
-|`LOCAL_NETWORK` | Sets the local network that should have access. Accepts comma separated list. | `LOCAL_NETWORK=192.168.0.0/24`|
+| `OPENVPN_CONFIG` | Sets the OpenVPN endpoint to connect to. | `OPENVPN_CONFIG=UK Southampton` |
+| `OPENVPN_OPTS` | Will be passed to OpenVPN on startup | See [OpenVPN doc](https://openvpn.net/index.php/open-source/documentation/manuals/65-openvpn-20x-manpage.html) |
+| `LOCAL_NETWORK` | Sets the local network that should have access. Accepts comma separated list. | `LOCAL_NETWORK=192.168.0.0/24` |
 
 ### User configuration options
 
@@ -118,17 +121,17 @@ You may set the following parameters to customize the user id that runs transmis
 
 | Variable | Function | Example |
 |----------|----------|-------|
-|`PUID` | Sets the user id who will run transmission | `PUID=1000` |
-|`PGID` | Sets the group id for the transmission user | `PGID=1000` |
+| `PUID` | Sets the user id who will run transmission | `PUID=1000` |
+| `PGID` | Sets the group id for the transmission user | `PGID=1000` |
 
 ### SABnzbd environment options
 
-| Variable | Function | Example |
-|----------|----------|-------|
-|`SABNZBD_HOME` | SABnzbd config files | `SABNZBD_HOME=/data/sabnzbd-home` |
-|`SABNZBD_BIND_ADDRESS` | IP Address SABnzbd listens on | `SABNZBD_BIND_ADDRESS=0.0.0.0` |
-|`SABNZBD_PORT` | Port SABnzbd listens on | `SABNZBD_PORT=7000` |
-|`SABNZBD_OPTS` | SABnzbd startup options | `SABNZBD_OPTS='-d -b 0'` |
+| Variable  | Function | Example |
+|-----------|----------|-------|
+| `SABNZBD_HOME` | SABnzbd config files | `SABNZBD_HOME=/data/sabnzbd-home` |
+| `SABNZBD_BIND_ADDRESS` | IP Address SABnzbd listens on | `SABNZBD_BIND_ADDRESS=0.0.0.0` |
+| `SABNZBD_PORT` | Port SABnzbd listens on | `SABNZBD_PORT=7000` |
+| `SABNZBD_OPTS` | SABnzbd startup options | `SABNZBD_OPTS='-d -b 0'` |
 
 ### create_cert.sh SSL options
 
@@ -138,15 +141,15 @@ This script can be manually ran to generate the certificate or automatically.
 /etc/transmission/create_cert.sh
 ```
 
-| Variable | Function                              | Defaults     |
-|----------|---------------------------------------|--------------|
-|`GENCERT` | Generates SSL Cert with below options | `GENCERT=no` |
+| Variable  | Function                              | Defaults     |
+|-----------|---------------------------------------|--------------|
+| `GENCERT` | Generates SSL Cert with below options | `GENCERT=no` |
 
-| Variable    | Defaults                   |
-|-------------|----------------------------|
-|`Country`    | `Country=US`               |
-|`State`      | `State=Reach`              |
-|`Locality`   | `Locality=Sector9`         |
-|`Company`    | `Company=MediaServices`    |
-|`Department` | `Department=Mediaservices` |
-|`HostName`   | `HostName=MediaBox.local`  |
+| Variable     | Defaults                   |
+|--------------|----------------------------|
+| `Country`    | `Country=US`               |
+| `State`      | `State=Reach`              |
+| `Locality`   | `Locality=Sector9`         |
+| `Company`    | `Company=MediaServices`    |
+| `Department` | `Department=Mediaservices` |
+| `HostName`   | `HostName=MediaBox.local`  |
