@@ -95,3 +95,4 @@
 #Company=MediaServices
 #Department=Mediaservices
 #HostName=MediaBox.local
+#HEALTH_CHECK_HOST=google.com

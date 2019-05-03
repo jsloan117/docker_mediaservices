@@ -122,7 +122,10 @@ ENV OPENVPN_USERNAME=**None** \
     Locality=Sector9 \
     Company=MediaServices \
     Department=Mediaservices \
-    HostName=MediaBox.local
+    HostName=MediaBox.local \
+    HEALTH_CHECK_HOST=google.com
+
+HEALTHCHECK --interval=5m CMD /etc/scripts/healthcheck.sh
 
 # Expose port and run
 EXPOSE 7000 9091

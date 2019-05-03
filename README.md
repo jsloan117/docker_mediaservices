@@ -59,6 +59,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | FreeVPN | `FREEVPN` |
 | FrootVPN | `FROOT` |
 | FrostVPN | `FROSTVPN` |
+| GhostPath | `GHOSTPATH` |
 | Giganews | `GIGANEWS` |
 | HideMe | `HIDEME` |
 | HideMyAss | `HIDEMYASS` |
@@ -77,15 +78,17 @@ This is a list of providers that are bundled within the image. The custom provid
 | PrivateVPN | `PRIVATEVPN` |
 | ProtonVPN | `PROTONVPN` |
 | proXPN | `PROXPN` |
-| proxy.sh | `PROXYSH` |
+| proxy.sh | `PROXYSH ` |
 | PureVPN | `PUREVPN` |
 | RA4W VPN | `RA4W` |
 | SaferVPN | `SAFERVPN` |
 | SlickVPN | `SLICKVPN` |
 | Smart DNS Proxy | `SMARTDNSPROXY` |
 | SmartVPN | `SMARTVPN` |
+| Surfshark | `SURFSHARK` |
 | TigerVPN | `TIGER` |
 | TorGuard | `TORGUARD` |
+| Trust.Zone | `TRUSTZONE` |
 | TunnelBear | `TUNNELBEAR`|
 | UsenetServerVPN | `USENETSERVER` |
 | Windscribe | `WINDSCRIBE` |
@@ -96,7 +99,6 @@ This is a list of providers that are bundled within the image. The custom provid
 | VPNFacile | `VPNFACILE` |
 | VPNTunnel | `VPNTUNNEL` |
 | VyprVpn | `VYPRVPN` |
-| Windscribe | `WINDSCRIBE` |
 
 ### Required environment options
 
@@ -132,6 +134,30 @@ You may set the following parameters to customize the user id that runs transmis
 | `SABNZBD_BIND_ADDRESS` | IP Address SABnzbd listens on | `SABNZBD_BIND_ADDRESS=0.0.0.0` |
 | `SABNZBD_PORT` | Port SABnzbd listens on | `SABNZBD_PORT=7000` |
 | `SABNZBD_OPTS` | SABnzbd startup options | `SABNZBD_OPTS='-d -b 0'` |
+
+### Health check option
+
+Because your VPN connection can sometimes fail, Docker will run a health check on this container every 5 minutes to see if the container is still connected to the internet. By default, this check is done by pinging google.com once. You change the host that is pinged.
+
+| Variable | Function | Example |
+|----------|----------|-------|
+| `HEALTH_CHECK_HOST` | this host is pinged to check if the network connection still works | `google.com` |
+
+### Custom pre/post scripts
+
+If you ever need to run custom code before or after transmission is executed or stopped, you can use the custom scripts feature.
+Custom scripts are located in the /scripts directory which is empty by default.
+To enable this feature, you'll need to mount the /scripts directory.
+
+Once /scripts is mounted you'll need to write your custom code in the following bash shell scripts:
+
+| Script | Function |
+|----------|----------|
+| `/scripts/openvpn-pre-start.sh` | This shell script will be executed before openvpn start |
+| `/scripts/transmission-pre-start.sh` | This shell script will be executed before transmission start |
+| `/scripts/transmission-post-start.sh` | This shell script will be executed after transmission start |
+| `/scripts/transmission-pre-stop.sh` | This shell script will be executed before transmission stop |
+| `/scripts/transmission-post-stop.sh` | This shell script will be executed after transmission stop |
 
 ### create_cert.sh SSL options
 
