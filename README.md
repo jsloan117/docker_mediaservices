@@ -1,10 +1,10 @@
 # docker_mediaservices
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![Docker Automated build](https://img.shields.io/docker/automated/jsloan117/mediaservices.svg)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jsloan117/mediaservices.svg)
+![Docker Build Status](https://img.shields.io/docker/cloud/build/jsloan117/mediaservices.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/jsloan117/mediaservices.svg)
 [![](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)](https://microbadger.com/images/jsloan117/mediaservices "Get your own image badge on microbadger.com")
-[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/jsloan117_marketplace/jsloan117%2Fdocker_mediaservices%2Fdocker_mediaservices?type=cf-1)]( https://g.codefresh.io/public/accounts/jsloan117_marketplace/pipelines/jsloan117/docker_mediaservices/docker_mediaservices)
 
 Docker container with OpenVPN, SABnzbd and Transmission Daemon
 
@@ -78,7 +78,7 @@ This is a list of providers that are bundled within the image. The custom provid
 | PrivateVPN | `PRIVATEVPN` |
 | ProtonVPN | `PROTONVPN` |
 | proXPN | `PROXPN` |
-| proxy.sh | `PROXYSH ` |
+| proxy.sh | `PROXYSH` |
 | PureVPN | `PUREVPN` |
 | RA4W VPN | `RA4W` |
 | SaferVPN | `SAFERVPN` |
