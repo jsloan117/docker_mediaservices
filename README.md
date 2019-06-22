@@ -1,10 +1,8 @@
 # docker_mediaservices
 
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jsloan117/mediaservices.svg)
-![Docker Build Status](https://img.shields.io/docker/cloud/build/jsloan117/mediaservices.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/jsloan117/mediaservices.svg)
-[![](https://images.microbadger.com/badges/image/jsloan117/mediaservices.svg)](https://microbadger.com/images/jsloan117/mediaservices "Get your own image badge on microbadger.com")
+
+# ***This is now archived and no longer actively being maintained***
 
 Docker container with OpenVPN, SABnzbd and Transmission Daemon
 
