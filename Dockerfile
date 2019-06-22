@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL Name=mediaservices Version=0.1.2
+LABEL Name=mediaservices Version=0.1.3
 LABEL maintainer="Jonathan Sloan"
 
 # Update packages and install software
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get -y install software-properties-common sudo wget gi
     apt-get update && apt-get -y upgrade && \
     apt-get -y install iputils-ping iproute2 net-tools dnsutils nano \
     p7zip-full par2-tbb python-sabyenc sabnzbdplus rar unrar ufw zip unzip bc \
-    transmission-cli transmission-common transmission-daemon openvpn \
+    transmission-cli transmission-common transmission-daemon openvpn tzdata \
     python2.7 python2.7-pysqlite2 && ln -sf /usr/bin/python2.7 /usr/bin/python2  && \
     wget https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64.deb && \
     dpkg -i dumb-init_1.2.2_amd64.deb && \
